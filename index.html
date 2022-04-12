@@ -4,83 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bai thuc hanh 1</title>
-    <link rel="stylesheet" href="./base.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <title>bth 01</title>
+    <link rel="stylesheet" href="grid-system.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="./images/logo.png" alt="Logo">
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">DỊCH VỤ</a></li>
-                <li><a href="#">DỰ ÁN</a></li>
-                <li><a href="#">TIN TỨC</a></li>
-                <li><a href="#">LIÊN HỆ</a></li>
-                <li><a href="#">BẢNG GIÁ</a></li>
-            </ul>
-        </div>
-    </header>
-    <div class="main">
+    <div class="wrapper">
+        <header>
+            <a href="#"class="header__logo">
+                <img src="./images/logo.png" alt="Logo" class="header__logo-image">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-item-link">Dịch vụ</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-item-link">Dự án</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-item-link">Tin tức</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-item-link">Liên hệ</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-item-link">Bảng giá</a>
+                    </li>
+                </ul>
+            </nav>
+            <label for="header__nav-mobile-input" class="header__nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+            </label>
+                <input type="checkbox" name="" hidden class="header__nav-input" id="header__nav-mobile-input" >
+
+            <label for="header__nav-mobile-input" class="header__nav-overlay"></label>
+            
+            <nav class="header__nav-mobile">
+              
+                <ul class="header__nav-mobile-list">
+                    <li class="header__nav-mobile-item">
+                        <a href="#" class="header__nav-mobile-item-link">Dịch vụ</a>
+                    </li>
+                    <li class="header__nav-mobile-item">
+                        <a href="#" class="header__nav-mobile-item-link">Dự án</a>
+                    </li>
+                    <li class="header__nav-mobile-item">
+                        <a href="#" class="header__nav-mobile-item-link">Tin tức</a>
+                    </li>
+                    <li class="header__nav-mobile-item">
+                        <a href="#" class="header__nav-mobile-item-link">Liên hệ</a>
+                    </li>
+                    <li class="header__nav-mobile-item">
+                        <a href="#" class="header__nav-mobile-item-link">Bảng giá</a>
+                    </li>
+                </ul>
+                <label for="header__nav-mobile-input" class="header__nav-mobile--close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+                </label>
+            </nav>
+        </header>
+
         <div class="banner">
         </div>
-        <div class="content">
-            <div class="category">
-                <div class="category-item-1">
-                    <span>VĂN PHÒNG</span>
+        <div class="container">
+            <div class="gallery">
+                <div class="gallery__item">
+                    <a href="#" class="gallery__item-link">
+                        <span class="gallery__item-label">Văn phòng</span>
+                    </a>
                 </div>
-                <div class="category-item-2">
-                    <span>BIỆT THỰ</span>
+                <div class="gallery__item">
+                    <a href="#" class="gallery__item-link">
+                        <span class="gallery__item-label">Biệt thự</span>
+                    </a>
                 </div>
-                <div class="category-item-3">
-                    <span>CĂN HỘ</span>
+                <div class="gallery__item">
+                    <a href="#" class="gallery__item-link">
+                        <span class="gallery__item-label">Căn hộ</span>
+                    </a>
                 </div>
-                <div class="category-item-4">
-                    <span>NHÀ PHỐ</span>
-                </div>
-            </div>
-            <div class="about-us">
-                <div class="about-us-title">VỀ CÔNG TY</div>
-                <div class="about-us-detail">
-                    <div class="about-us-detail-1">
-                        <span>NHÀ MÁY</span>
-                    </div>
-                    <div class="about-us-detail-2">
-                        <span>SHOWROOM</span>
-                    </div>
-                    <div class="about-us-detail-3">
-                        <span>GIỚI THIỆU</span>
-                    </div>
+                <div class="gallery__item">
+                    <a href="#" class="gallery__item-link">
+                        <span class="gallery__item-label">Nhà phố</span>
+                    </a>
                 </div>
             </div>
+
+            <div class="about">
+                <h2 class="about__title">Về chúng tôi</h2>
+                <div class="about__category">
+                    <div class="about__category-item">
+                        <a href="#" class="about__category-item-link">
+                            <span class="about__category-item-label">Nhà máy</span>
+                        </a>
+                    </div>
+                    <div class="about__category-item">
+                        <a href="#" class="about__category-item-link">
+                            <span class="about__category-item-label">Showroom</span>
+                        </a>
+                    </div>
+                    <div class="about__category-item">
+                        <a href="#" class="about__category-item-link">
+                            <span class="about__category-item-label">Giới thiệu</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+
         </div>
+
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__content-item">
+                    <ul class="footer__content-item--list">
+                        <li><a href="#" class="list-link">Về chúng tôi</a></li>
+                        <li><a href="#" class="list-link">Chính sách & Quy định chung</a></li>
+                        <li><a href="#" class="list-link">Hướng dẫn đổi trả hàng</a></li>
+                        <li><a href="#" class="list-link">Bảo hành</a></li>
+                        <li><a href="#" class="list-link">Thanh toán</a></li>
+                        <li><a href="#" class="list-link">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="footer__content-item">
+                    <p class="footer__content-item--contact">Địa chỉ: Lô 103, đường An Dương Vương, Khu Đô thị An Cựu, Huế.</p>
+                    <p class="footer__content-item--contact">Điện thoại: (0234) 3826767 - 3827878</p>
+                    <p class="footer__content-item--contact">Văn phòng tại <span style="font-weight: bold;">Đà Nẵng </span>: 18 Bạch Đằng</p>
+                </div>
+                <div class="footer__content-item">
+                    <p class="footer__content-item--policy">Giấy phép đăng ký kinh doanh số 03442187, cấp ngày 12/03/2010 tại Sở Công thương tỉnh Thừa Thiên Huế.</p>
+                </div>
+            </div>
+        </footer>
+
+
     </div>
-    <footer>
-        <div class="footer-main">
-            <div class="footer-menu">
-                <ul>
-                    <li><a href="#">Về chúng tôi</a></li>
-                    <li><a href="#">Chính sách & Quy định chung</a></li>
-                    <li><a href="#">Hướng dẫn đổi trả hàng</a></li>
-                    <li><a href="#">Bảo hành</a></li>
-                    <li><a href="#">Thanh toán</a></li>
-                    <li><a href="#">Chính sách bảo mật</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <div class="footer-contact-content">
-                    <p>Địa chỉ: Lô 103, đường An Dương Vương, Khu Đô thị An Cựu, Huế.</p> 
-                    <p> Điện thoại: (0234) 38626767 - 3827878</p>
-                    <p>Văn phòng tại <b> Đà nẵng</b>: 18 Bạch Đằng</p>
-                </div>
-            </div>
-            <div class="footer-about-license">
-                <p>Giấy phép đăng ký kinh doanh số 03442187, cấp ngày 12/03/2010 tại Sở Công thương tỉnh Thừa Thiên Huế.</p>
-            </div> 
-        </div>
-    </footer>
 </body>
 </html>

@@ -1,191 +1,233 @@
 *{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-    font-family: 'Roboto', sans-serif;
-	box-sizing: border-box;
-	vertical-align: baseline;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 :root{
-    --main-width: 1120px;
-    --content-width:940px;
+    --width-full: 112rem;
+    --content-width:94rem;
+    --black-color: #000;
+    --white-color: #fff;
+    --text-color: #333;
+    --primary-color: #fff206;
 }
-body{
-    margin:0 auto;
-    width: var(--main-width)
+html{
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
+.wrapper{
+    margin: 0 auto;
+    width: var(--width-full);
+}
+
+/* header */
 header{
-    width: var(--main-width);
-    height: 62px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: var(--white-color);
+    height: 6.2rem;
+    width: var(--width-full);
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.header__logo{
+    margin-left: 1rem;   
+}
+.header__logo-image{
+    width: 100%;
+}
+.header__nav{
+    margin-bottom: 1rem;
+    margin-right: 17.5rem;
+    /* display: none; */
+}
+.header__nav-list{
+    list-style: none;
+    display: flex;
+}
 
+.header__nav-item{
+    padding: 0.5rem 1rem;
 }
-.logo{
-    margin:0 400px 2px 20px;
-   
-}
-.menu ul li{
-    display: inline-block;
-    /* padding: 18px 9px 0 9px; */
-    padding: 15px 9px 0 9px;
-}
-.menu ul li a{
-    color: #000;
-    font-size: 14px;
+
+.header__nav-item-link{
     text-decoration: none;
-    font-weight: 400;
-    
-}
-.banner{
-    width: var(--main-width);
-    height: 420px;
-    background-image: url(./images/slide.png);
-    background-position: center; 
-    /* background-repeat: no-repeat;  */
-     background-size: cover; 
-    
-}
-.content{
-    width:940px;
-    margin: 3px auto;
-}
-.category{
-    width: 100%;
-    height: 185px;
-    display: flex;
-    justify-items: center;
-    
-}
-.category-item-1{
-    width:25%;
-    height: 100%;
-    background-image: url(./images/image1.png);
-    
-    /* opacity: 0.5; */
-}
-.category-item-2{
-    width:25%;
-    height: 100%;
-    background-image: url(./images/image2.png);
-    /* opacity: 0.5; */
-}
-.category-item-3{
-    width:25%;
-    height: 100%;
-    background-image: url(./images/image3.png);
-    /* opacity: 0.5; */
-}
-.category-item-4{
-    width:25%;
-    height: 100%;
-    background-image: url(./images/image4.png);
-}
-.category span{
+    font-size: 1.4rem;
+    color: var(--text-color);
     display: block;
-    font-size: 20px;
-    font-weight: bold;
-    width:100%;
-    padding-top:140px;
-    text-align: center;
+    text-transform: uppercase;
 }
-.about-us-title{
-    width:100%;
-    height: 70px;
-    font-size: 28px;
-    padding-top: 22px;
-    /* box-sizing: border-box; */
+.header__nav-item-link:hover{
+    color: var(--primary-color);
 }
-.about-us-detail{
-    width: 100%;
-    height: 235px;
-    display: flex;
-}
-.about-us-detail-1{
-    width:33.3333%;
-     height: 100%; 
-    background-image: url(./images/nha-may.jpg);
-    background-position: center; 
-    /* background-repeat: no-repeat;  */
-     background-size: cover; 
-}
-.about-us-detail-2{
-    width:33.3333%;
-    height: 100%;
-    background-image: url(./images/showroom.jpg);
-    background-position: center; 
-    /* background-repeat: no-repeat;  */
-     background-size: cover; 
-     
-}
-.about-us-detail-3{
-    width:33.3333%;
-    height: 100%;
-    background-image: url(./images/gioi-thieu.jpg);
-    background-position: center; 
-    /* background-repeat: no-repeat;  */
-     background-size: cover; 
-}
-.about-us-detail span{
-    font-size: 20px;
-    color:#fff;
-    display: block;
-    text-align: center;
-    margin-top:180px;
-    font-weight: 900;
-}
-footer{
-    width:var(--main-width);
-    height: 185px;
-    margin-top:50px;
-    background-color:yellow ;
 
-} 
-.footer-main{
-    width: 940px;
-    height:100%;
+/* banner */
+.banner{
+    width: 100%;
+    height: 42rem;
+    background-image: url(./images/slide.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 6.2rem;
+}
+
+.container{
+    width: var(--content-width);
+    margin: 4rem auto 5rem;
+}
+/* banner */
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery__item{
+    width: 25%;
+    height: 18rem;
+    position: relative;
+}
+.gallery__item:nth-child(1){
+    background: url(./images/image1.png) no-repeat top ;
+    background-size: cover;
+}
+.gallery__item:nth-child(2){
+    background: url(./images/image2.png) no-repeat top;
+    background-size: cover;
+
+}
+.gallery__item:nth-child(3){
+    background: url(./images/image3.png) no-repeat top;
+    background-size: cover;
+    
+}
+.gallery__item:nth-child(4){
+    background: url(./images/image4.png) no-repeat top;
+    background-size: cover;
+
+}
+.gallery__item-link{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--black-color);
+}
+.gallery__item-link:hover{
+    background-color: rgba(0 , 0, 0, 0.1);
+}
+
+.gallery__item-label,
+.about__category-item-label{
+    position: absolute;
+    display: block;
+    min-width: 13rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight:500;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 0 0.03rem 0.015rem #000;
+}
+
+/* about */
+.about{
+}
+.about__title{
+    font-size: 2.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 2rem 0;
+}
+.about__category{
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.about__category-item{
+    width: 33.33%;
+    height: 23.6rem;
+
+}
+.about__category-item-link:hover{
+    background-color: rgba(0 , 0, 0, 0.1);
+    
+}
+
+.about__category-item-link{
+    color: var(--white-color);
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.about__category-item:nth-child(1){
+    background-image: url(./images/nha-may.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.about__category-item:nth-child(2){
+    background-image: url(./images/showroom.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.about__category-item:nth-child(3){
+    background-image: url(./images/gioi-thieu.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* footer */
+.footer{
+    width: var(--width-full);
+    background-color: var(--primary-color);
+    min-height: 18.5rem;
+}
+
+.footer__content{
+    width: var(--content-width);
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-content: center;
-    margin: 0 auto;
+    align-items: center;
 }
-
-.footer-menu {
-    width:33.3333333%;
-    box-sizing: border-box;
-    padding: 30px 90px 35px 12px;
+.footer__content-item{
+    padding-top:3rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 33.333%;
 }
-.footer-menu ul {
-    list-style-type: none;
-    
-
+.footer__content-item--list{
+    list-style: none;
 }
-.footer-menu ul a{
-    color: #000;
-    font-size: 13.5px;
+.list-link{
+    font-size: 1.3rem;
+    line-height: 2rem;  
+    font-weight: 700;  
     text-decoration: none;
-    line-height: 1.4;
-    font-weight: 900;
+    color: var(--black-color);
 }
-.footer-contact{
-    width: 33.33%;
-    
+.list-link:hover{
+    opacity: 0.6;
 }
-.footer-contact-content{
-    width: 260px;
-    margin: 30px 10px;
-}
-.footer-contact-content p{
-   
-    font-size: 14px;
+
+.footer__content-item--policy,
+.footer__content-item--contact{
+    font-size: 1.3rem;
     font-weight: 500;
-    line-height: 1.3;
-}
-.footer-about-license{
-    width: 33.3333333%; 
-}
-.footer-about-license p{
-    font-size: 14px;
-    font-weight: 500;
-    margin: 30px 10px;
 }
